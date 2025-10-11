@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="card">
+<!-- post -->
+  <div class="card-header">
+	<span class="fw-bold">
+	<h2>{{ object.title }}</h2>
+	</span> &middot;
+	<span class="text-muted"><p>by {{ object.author }} | {{ object.updated_at }}</p></span>
+  </div>
+  <div class="card-body">
+	<p>{{ object.body }}</p>
+  </div>
+</div>
+
+
+{% endblock content %}
