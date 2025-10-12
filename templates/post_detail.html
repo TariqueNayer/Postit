@@ -14,5 +14,12 @@
   </div>
 </div>
 
-
+<div>
+	{% if post.author.pk == request.user.pk %}
+	<p><a class="btn btn-info" href="{% url 'post_edit' post.pk %}">Edit</a>
+		<a class="btn btn-danger" href="{% url 'post_delete' post.pk %}">Delete</a>
+	</p>
+	{% endif %}
+	<p><a href="{% url 'post_list' %}">All Articles</a></p>
+</div>
 {% endblock content %}
